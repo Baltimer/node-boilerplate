@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "pm2 start app.js --name node-boilerplate --watch",
+    "restart": "pm2 restart node-boilerplate --watch",
     "stop": "pm2 stop node-boilerplate --watch",
     "delete": "pm2 delete node-boilerplate --watch",
     "show": "pm2 show node-boilerplate",
     "pm2-list": "pm2 list",
+    "logs": "pm2 logs node-boilerplate [--lines 10]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,6 +24,8 @@
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
-    "socket.io": "^2.2.0"
+    "mongoose": "^5.6.1",
+    "socket.io": "^2.2.0",
+    "validator": "^11.0.0"
   }
 }
